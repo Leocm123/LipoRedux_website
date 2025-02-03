@@ -83,3 +83,8 @@ html{
     word-wrap: break-word;
     text-decoration: none;
 }
+
+.blank {
+    background-color: white;
+    height: 75vh;
+}
