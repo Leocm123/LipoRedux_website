@@ -7,15 +7,18 @@
     justify-content: center;
 }
 .container {
-    max-width: 900px;
-    padding: 20px;
+    padding: 70px;
+    height: 650px;
+    max-width: 60%;
     text-align: center;
+
 }
 
 h1 {
-    color: #F28705;
-    font-size: 52px;
-    font-weight: bolder;
+    color: #f28705;
+  font-size: 96px;
+  letter-spacing: -0.04em;
+  font-weight: 900;
 }
 
 .information {
@@ -23,9 +26,12 @@ h1 {
 }
 
 .description {
-    color: #F28705;
-    font-size: 14px;
-    margin-bottom: 20px;
+    color: #f28705;
+  text-align: left;
+  font-size: 20px;
+  letter-spacing: -0.04em;
+  font-weight: 500;
+  position: relative;
 }
 .benefits {
     display: flex;
@@ -35,6 +41,7 @@ h1 {
     align-items: flex-end;
 }
 .benefit {
+    
     background-color: rgba(255, 189, 65, 0.3);
     padding: 20px;
     border-radius: 10px;
@@ -42,32 +49,74 @@ h1 {
     position: relative;
 }
 .benefit:nth-child(1) {
-    width: 200px;
-    height: 130px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: rgba(242, 135, 5, 0.17);
+  border-radius: 10px;
+  height: 230px;
+  position: relative;
+ 
 }
 .benefit:nth-child(2) {
-    width: 230px;
-    height: 180px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: rgba(242, 135, 5, 0.17);
+    border-radius: 10px;
+    height: 310px;
+    position: relative;
 }
 .benefit:nth-child(3) {
-    width: 260px;
-    height: 230px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: rgba(242, 135, 5, 0.17);
+  border-radius: 10px;
+  height: 400px;
+  position: relative;
+
 }
 .benefit h3 {
-    margin: 0;
-    color: #F28705;
-    font-size: 18px;
+    color: #f28705;
+    text-align: left;
+    font-size: 64px;
+    letter-spacing: -0.04em;
+    font-weight: 900;
+    position: relative;
+    bottom: 12px;
+
 }
 .benefit p {
-    color: #F28705;
-    font-size: 14px;
-    margin-top: 10px;
+    color: #f28705;
+  text-align: left;
+  font-size: 32px;
+  letter-spacing: -0.04em;
+  font-weight: 600;
+  position: relative;
+  width: 229px;
 }
 .icon {
     position: absolute;
     top: 10px;
     right: 10px;
 }
+
+.line-bloco{
+    display: flex;
+    justify-content: space-between;
+}
+
+.line-bloco img{
+    width: 50px;
+  height: 50px;
+}
+
+
+
 @media (max-width: 768px) {
     .benefits {
         flex-direction: column;
