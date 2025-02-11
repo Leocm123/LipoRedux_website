@@ -86,18 +86,20 @@ html{
 }
 
 .blank {
+    background-attachment: fixed;
     width: 100%;
     background-color: white;
-    height: 400px;
+    height: 460px;
     background-color: transparent;
     z-index: -1;
 }
 
 #img-background{
     width: 100%;
+    background-attachment: fixed;
 
     position: relative;
-    bottom: 360px;
+    bottom: 440px;
     z-index: -1;
 }
 
@@ -114,6 +116,8 @@ html{
  }
 
 .hero-section{
+    position: relative;
+    top: 160px;
     color: #ffffff;
   text-align: center;
   font-size: 20px;
@@ -127,7 +131,9 @@ html{
   border-color: #ffffff;
   border-width: 1px;
  background-color: transparent;
-  height: 40px;
+  height: 30px;
+  width: 626px;
+  margin-top: 20px;
 }
 
 #send-email{
@@ -137,6 +143,9 @@ html{
   border-width: 1px;
   width: 127px;
   height: 30px;
+background-color: transparent;
+color: white;
+margin-top: 20px;
 
 }
 
