@@ -1,32 +1,31 @@
 .benefit_pg {
-    font-family: 'Roboto', serif;
-    background-color: #FADE8A;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
+  font-family: "Roboto", serif;
+  background-color: #fade8a;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
 }
 .container {
-    padding: 70px 0px 70px 0px;
-    height: 650px;
-    max-width: 60%;
-    text-align: center;
-    
+  padding: 70px 0px 70px 0px;
+  height: 650px;
+  max-width: 60%;
+  text-align: center;
 }
 
 h1 {
-    color: #f28705;
+  color: #f28705;
   font-size: 96px;
   letter-spacing: -0.04em;
   font-weight: 900;
 }
 
 .information {
-    text-align: left;
+  text-align: left;
 }
 
 .description {
-    color: #f28705;
+  color: #f28705;
   text-align: left;
   font-size: 20px;
   letter-spacing: -0.04em;
@@ -34,64 +33,60 @@ h1 {
   position: relative;
 }
 .benefits {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-    align-items: flex-end;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  align-items: flex-end;
 }
 .benefit {
-    
-    background-color: rgba(255, 189, 65, 0.3);
-    padding: 20px;
-    border-radius: 10px;
-    text-align: left;
-    position: relative;
+  background-color: rgba(255, 189, 65, 0.3);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+  position: relative;
 }
 .benefit:nth-child(1) {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background: rgba(242, 135, 5, 0.17);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: rgba(242, 135, 5, 0.17);
   border-radius: 10px;
   height: 230px;
   position: relative;
- 
 }
 .benefit:nth-child(2) {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background: rgba(242, 135, 5, 0.17);
-    border-radius: 10px;
-    height: 310px;
-    position: relative;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: rgba(242, 135, 5, 0.17);
+  border-radius: 10px;
+  height: 310px;
+  position: relative;
 }
 .benefit:nth-child(3) {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background: rgba(242, 135, 5, 0.17);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: rgba(242, 135, 5, 0.17);
   border-radius: 10px;
   height: 400px;
   position: relative;
-
 }
 .benefit h3 {
-    color: #f28705;
-    text-align: left;
-    font-size: 64px;
-    letter-spacing: -0.04em;
-    font-weight: 900;
-    position: relative;
-    bottom: 12px;
-
+  color: #f28705;
+  text-align: left;
+  font-size: 64px;
+  letter-spacing: -0.04em;
+  font-weight: 900;
+  position: relative;
+  bottom: 12px;
 }
 .benefit p {
-    color: #f28705;
+  color: #f28705;
   text-align: left;
   font-size: 32px;
   letter-spacing: -0.04em;
@@ -100,30 +95,28 @@ h1 {
   width: 229px;
 }
 .icon {
-    position: absolute;
-    top: 10px;
-    right: 10px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
 
-.line-bloco{
-    display: flex;
-    justify-content: space-between;
+.line-bloco {
+  display: flex;
+  justify-content: space-between;
 }
 
-.line-bloco img{
-    width: 50px;
+.line-bloco img {
+  width: 50px;
   height: 50px;
 }
 
-
-
 @media (max-width: 768px) {
-    .benefits {
-        flex-direction: column;
-        align-items: center;
-    }
-    .benefit {
-        width: 100%;
-        height: auto;
-    }
+  .benefits {
+    flex-direction: column;
+    align-items: center;
+  }
+  .benefit {
+    width: 100%;
+    height: auto;
+  }
 }
