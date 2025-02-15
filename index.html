@@ -187,22 +187,34 @@
         </div>
 
         <script>
-          let index = 2;
-          const slides = document.querySelectorAll(".slide");
-          const totalSlides = slides.length;
+          let index = 2; 
+const slides = document.querySelectorAll('.slide');
+const totalSlides = slides.length;
 
-          function moveSlide(step) {
-            slides[index].classList.remove("active");
-            index = (index + step + totalSlides) % totalSlides;
-            slides[index].classList.add("active");
+function updateSliderPosition() {
+    const slider = document.getElementById('slider');
+    const activeSlide = document.querySelector('.slide.active');
+    
+    const containerWidth = document.querySelector('.slider-container').offsetWidth;
+    const activeSlideWidth = activeSlide.offsetWidth;
 
-            const offset = -index * 25 + 25;
-            document.getElementById(
-              "slider"
-            ).style.transform = `translateX(${offset}%)`;
-          }
+    // Calcula o deslocamento para manter o slide ativo no centro
+    const offset = (containerWidth / 2) - (activeSlide.offsetLeft + activeSlideWidth / 2);
+    slider.style.transform = `translateX(${offset}px)`;
+}
 
-          setInterval(() => moveSlide(1), 3000); // Auto-scroll every 3 seconds
+function moveSlide(step) {
+    slides[index].classList.remove('active');
+    index = (index + step + totalSlides) % totalSlides;
+    slides[index].classList.add('active');
+    updateSliderPosition();
+}
+
+// Ajusta a posição inicial do slider
+window.onload = () => {
+    updateSliderPosition();
+    setInterval(() => moveSlide(1), 3000); // Auto-scroll a cada 3 segundos
+};
         </script>
 
         <div class="blur-back"></div>
