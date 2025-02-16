@@ -37,3 +37,49 @@
   letter-spacing: -0.04em;
   font-weight: 500;
 }
+
+.agrupa-blocos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Espaçamento entre os blocos */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.agrupa-blocos div {
+    background: #FFC56E; /* Cor semelhante à da imagem */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    width: calc(50% - 20px); /* 2 colunas */
+    min-height: 180px;
+}
+
+.test1{
+    background: #fade8a;
+  border-radius: 10px;
+  width: 300px;
+  height: 500px;
+}
+
+.test2{
+    background: #fade8a;
+  border-radius: 10px;
+  height: 252px;
+  width: 400px;
+}
+
+.test3{
+    background: #fade8a;
+    border-radius: 10px;
+    height: 252px;
+    width: 300px;
+}
+
+.test4{
+    background: #fade8a;
+  border-radius: 10px;
+  height: 277px;
+  width: 750px;
+}
