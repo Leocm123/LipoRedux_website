@@ -120,13 +120,12 @@
         </p>
 
         <div class="agrupa-blocos">
-          <div class="test1"></div>
-          <div class="test2"></div>
-          <div class="test3"></div>
-          <div class="test4"></div>
+          <div class="test1">1</div>
+          <div class="test2">2</div>
+          <div class="test3">3</div>
+          <div class="test4">4</div>
+          <div class="blur-back"></div>
         </div>
-
-        <div class="blur-back"></div>
       </div>
     </section>
 
@@ -187,36 +186,38 @@
         </div>
 
         <script>
-          let index = 2; 
-const slides = document.querySelectorAll('.slide');
-const totalSlides = slides.length;
+          let index = 2;
+          const slides = document.querySelectorAll(".slide");
+          const totalSlides = slides.length;
 
-function updateSliderPosition() {
-    const slider = document.getElementById('slider');
-    const activeSlide = document.querySelector('.slide.active');
-    
-    const containerWidth = document.querySelector('.slider-container').offsetWidth;
-    const activeSlideWidth = activeSlide.offsetWidth;
+          function updateSliderPosition() {
+            const slider = document.getElementById("slider");
+            const activeSlide = document.querySelector(".slide.active");
 
-    // Calcula o deslocamento para manter o slide ativo no centro
-    const offset = (containerWidth / 2) - (activeSlide.offsetLeft + activeSlideWidth / 2);
-    slider.style.transform = `translateX(${offset}px)`;
-}
+            const containerWidth =
+              document.querySelector(".slider-container").offsetWidth;
+            const activeSlideWidth = activeSlide.offsetWidth;
 
-function moveSlide(step) {
-    slides[index].classList.remove('active');
-    index = (index + step + totalSlides) % totalSlides;
-    slides[index].classList.add('active');
-    updateSliderPosition();
-}
+            // Calcula o deslocamento para manter o slide ativo no centro
+            const offset =
+              containerWidth / 2 -
+              (activeSlide.offsetLeft + activeSlideWidth / 2);
+            slider.style.transform = `translateX(${offset}px)`;
+          }
 
-// Ajusta a posição inicial do slider
-window.onload = () => {
-    updateSliderPosition();
-    setInterval(() => moveSlide(1), 3000); // Auto-scroll a cada 3 segundos
-};
+          function moveSlide(step) {
+            slides[index].classList.remove("active");
+            index = (index + step + totalSlides) % totalSlides;
+            slides[index].classList.add("active");
+            updateSliderPosition();
+          }
+
+          // Ajusta a posição inicial do slider
+          window.onload = () => {
+            updateSliderPosition();
+            setInterval(() => moveSlide(1), 3000); // Auto-scroll a cada 3 segundos
+          };
         </script>
-
       </div>
     </section>
 
@@ -236,7 +237,9 @@ window.onload = () => {
             <li>
               <h4>About</h4>
             </li>
-            <a href=""><li style="word-break: nowrap;">About the Products</li></a>
+            <a href=""
+              ><li style="word-break: nowrap">About the Products</li></a
+            >
             <a href=""><li>Benefits</li></a>
             <a href=""><li>Testimony</li></a>
           </ul>
