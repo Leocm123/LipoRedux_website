@@ -23,7 +23,6 @@
   display: flex;
   justify-content: center;
   align-self: center;
-  bottom: 30rem;
 }
 
 .titulo-test {
@@ -40,44 +39,47 @@
 }
 
 .agrupa-blocos {
-  display: grid;
-  grid-template-columns: 350px 350px; /* Duas colunas de 350px */
-  grid-template-rows: auto auto; /* Altura automática para se ajustar ao conteúdo */
-  gap: 20px; /* Espaçamento entre os blocos */
-  justify-content: center;
-  width: 100%;
-  max-width: 800px; /* Mantém alinhado ao centro */
-  margin: 40px auto 0 auto; /* Centraliza a seção */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Espaçamento entre os blocos */
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.test1 {
-  grid-column: 1; /* Primeira coluna */
-  grid-row: 1 / span 3; /* Ocupa duas linhas */
-  height: 420px;
-  width: 350px;
-  background: #fade8a;
+.agrupa-blocos div {
+    background: #FFC56E; /* Cor semelhante à da imagem */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    width: calc(50% - 20px); /* 2 colunas */
+    min-height: 180px;
 }
 
-.test2 {
-  grid-column: 2; /* Segunda coluna */
-  grid-row: 1; /* Primeira linha */
-  height: 200px;
-  width: 350px;
-  background: #fade8a;
+.test1{
+    background: #fade8a;
+  border-radius: 10px;
+  width: 300px;
+  height: 500px;
 }
 
-.test3 {
-  grid-column: 3; /* Segunda coluna */
-  grid-row: 1; /* Segunda linha */
-  height: 200px;
-  width: 350px;
-  background: #fade8a;
+.test2{
+    background: #fade8a;
+  border-radius: 10px;
+  height: 252px;
+  width: 400px;
 }
 
-.test4 {
-  grid-column: span 2; /* Ocupa as duas colunas */
-  grid-row: 2; /* Terceira linha */
-  height: 200px;
-  width: 720px;
-  background: #fade8a;
+.test3{
+    background: #fade8a;
+    border-radius: 10px;
+    height: 252px;
+    width: 300px;
+}
+
+.test4{
+    background: #fade8a;
+  border-radius: 10px;
+  height: 277px;
+  width: 750px;
 }

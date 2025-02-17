@@ -10,14 +10,13 @@ html {
 
 .vertical-line1 {
   width: 1.5px;
-  height: 75px;
+  height: 80px;
   background-color: white;
 }
 
 .vertical-line2 {
-  margin-right: 10px;
   width: 1.5px;
-  height: 75px;
+  height: 80px;
   background-color: white;
 }
 
@@ -40,12 +39,13 @@ html {
 }
 
 .box-menu {
-  padding-left: 2%;
   padding-right: 2%;
-
-  justify-content: end;
+  justify-content: space-between;
   display: flex;
+  align-items: center;
+  width: 5%;
 }
+
 
 .nav-list a {
   text-decoration: none;
@@ -56,11 +56,13 @@ html {
   color: white;
 }
 
-.nav-list a,
-.nav-list li {
+.nav-list a {
   border: none;
+  align-self: center;
   outline: none;
 }
+
+
 
 .nav-list {
   padding-left: 2%;
@@ -129,6 +131,17 @@ html {
   height: 30px;
   width: 626px;
   margin-top: 20px;
+  padding-left: 10px;
+  color: white;
+}
+
+#input-email:focus{
+  outline: none !important;
+}
+
+#input-email::placeholder{
+  color: white;
+  opacity: .4;
 }
 
 #send-email {
@@ -141,6 +154,13 @@ html {
   background-color: transparent;
   color: white;
   margin-top: 20px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+#send-email:hover{
+  color: #f28705;
+  background-color: white;
 }
 
 .botoes {

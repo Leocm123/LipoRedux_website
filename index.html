@@ -16,34 +16,32 @@
     <link rel="stylesheet" href="style/about.css" />
     <link rel="stylesheet" href="style/footer.css" />
     <link rel="stylesheet" href="style/bef_aft.css" />
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
   </head>
   <body>
     <header>
       <nav class="header">
-        <ul class="nav-list">
-          <li>
+    <div class="nav-list">
             <a href="">About</a>
-          </li>
-          <li>
             <a href="">Contact</a>
-          </li>
-          <li>
             <a href="">Results</a>
-          </li>
-          <li>
             <a href="">Benefits</a>
-          </li>
-        </ul>
         <div class="vertical-line1"></div>
+    </div>
 
         <div class="logo">
           <img src="assets/logoprincipal.svg" alt="" />
         </div>
 
+
         <div class="box-menu">
           <div class="vertical-line2"></div>
-
-          <img src="assets/menubutton.svg" alt="" />
+          <div>
+            <a href=""> <img src="assets/menubutton.svg" alt="" /></a>
+          </div>
         </div>
       </nav>
     </header>
@@ -56,7 +54,7 @@
         you as soon as possible.
       </p>
       <div class="botoes">
-        <input type="text" id="input-email" />
+        <input type="text" id="input-email" placeholder="Your best E-mail:" />
         <button id="send-email">Send</button>
       </div>
     </div>
@@ -160,63 +158,110 @@
           inspired to start your journey today
         </p>
 
-        <div class="slider-container">
-          <button class="prev" onclick="moveSlide(-1)">❮</button>
-          <div class="slider" id="slider">
-            <div class="slide">
-              <img src="assets/slide01.png" alt="Before and After 1" />
-            </div>
-            <div class="slide">
-              <img src="assets/slide02.png" alt="Before and After 2" />
-            </div>
-            <div class="slide active">
-              <img src="assets/slide03.png" alt="Before and After 3" />
-            </div>
-            <div class="slide">
-              <img src="assets/slide04.png" alt="Before and After 4" />
-            </div>
-            <div class="slide">
-              <img src="assets/slide05.png" alt="Before and After 5" />
-            </div>
-            <div class="slide">
-              <img src="assets/slide06.png" alt="Before and After 6" />
-            </div>
-          </div>
-          <button class="next" onclick="moveSlide(1)">❯</button>
-        </div>
+        <style>
+         
+          swiper-container {
+            width: 100%;
+            height: 100%;
+          }
+      
+          swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            display: flex;
+            justify-content: center;
+            background: #fade8a;
+            border-radius: 10px;
+            box-shadow: 0px 13px 37.3px -8px rgba(242, 135, 5, 1);
 
+            align-items: center;
+          }
+      
+          swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+          }
+      
+          swiper-container {
+            width: 100%;
+            height: 300px;
+            margin: 20px auto;
+          }
+      
+          .append-buttons {
+            text-align: center;
+            margin-top: 20px;
+          }
+      
+          .append-buttons button {
+            display: inline-block;
+            cursor: pointer;
+            border: 1px solid #007aff;
+            color: #007aff;
+            text-decoration: none;
+            padding: 4px 10px;
+            border-radius: 4px;
+            margin: 0 10px;
+            font-size: 13px;
+          }
+        </style>
+      </head>
+      
+      <body>
+      
+        <swiper-container class="mySwiper" slides-per-view="3" centered-slides="true" space-between="30" pagination="true"
+          pagination-type="fraction" navigation="true">
+          <swiper-slide>Slide 1</swiper-slide>
+          <swiper-slide>Slide 2</swiper-slide>
+          <swiper-slide>Slide 3</swiper-slide>
+          <swiper-slide>Slide 4</swiper-slide>
+        </swiper-container>
+      
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+      
         <script>
-          let index = 2;
-          const slides = document.querySelectorAll(".slide");
-          const totalSlides = slides.length;
-
-          function updateSliderPosition() {
-            const slider = document.getElementById("slider");
-            const activeSlide = document.querySelector(".slide.active");
-
-            const containerWidth =
-              document.querySelector(".slider-container").offsetWidth;
-            const activeSlideWidth = activeSlide.offsetWidth;
-
-            // Calcula o deslocamento para manter o slide ativo no centro
-            const offset =
-              containerWidth / 2 -
-              (activeSlide.offsetLeft + activeSlideWidth / 2);
-            slider.style.transform = `translateX(${offset}px)`;
-          }
-
-          function moveSlide(step) {
-            slides[index].classList.remove("active");
-            index = (index + step + totalSlides) % totalSlides;
-            slides[index].classList.add("active");
-            updateSliderPosition();
-          }
-
-          // Ajusta a posição inicial do slider
-          window.onload = () => {
-            updateSliderPosition();
-            setInterval(() => moveSlide(1), 3000); // Auto-scroll a cada 3 segundos
-          };
+          const swiperEl = document.querySelector('swiper-container');
+          const swiper = swiperEl.swiper;
+      
+          var appendNumber = 4;
+          var prependNumber = 1;
+          document
+            .querySelector(".prepend-2-slides")
+            .addEventListener("click", function (e) {
+              e.preventDefault();
+              swiper.prependSlide([
+                '<swiper-slide>Slide ' + --prependNumber + "</swiper-slide>",
+                '<swiper-slide>Slide ' + --prependNumber + "</swiper-slide>",
+              ]);
+            });
+          document
+            .querySelector(".prepend-slide")
+            .addEventListener("click", function (e) {
+              e.preventDefault();
+              swiper.prependSlide(
+                '<swiper-slide>Slide ' + --prependNumber + "</swiper-slide>"
+              );
+            });
+          document
+            .querySelector(".append-slide")
+            .addEventListener("click", function (e) {
+              e.preventDefault();
+              swiper.appendSlide(
+                '<swiper-slide>Slide ' + ++appendNumber + "</swiper-slide>"
+              );
+            });
+          document
+            .querySelector(".append-2-slides")
+            .addEventListener("click", function (e) {
+              e.preventDefault();
+              swiper.appendSlide([
+                '<swiper-slide>Slide ' + ++appendNumber + "</swiper-slide>",
+                '<swiper-slide>Slide ' + ++appendNumber + "</swiper-slide>",
+              ]);
+            });
         </script>
       </div>
     </section>
@@ -258,5 +303,8 @@
         <img src="assets/logoprincipal.svg" alt="" style="" />
       </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
   </body>
 </html>
