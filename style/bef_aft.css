@@ -44,6 +44,10 @@
     padding-bottom: 2rem;
   }
 
+  :root {
+    --swiper-navigation-color: #f28705 !important; /* Define a cor dos ícones prev/next */
+}
 
+  
 
 /*===========================================*/
