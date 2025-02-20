@@ -48,3 +48,28 @@ var swiper = new Swiper(".mySwiper", {
         '<div class="swiper-slide">Slide ' + ++appendNumber + "</div>",
       ]);
     });
+
+    //==================================================
+
+    document.addEventListener("DOMContentLoaded", function() {
+      const brazil = document.getElementById("brazil");
+      const uk = document.getElementById("uk");
+      var ukAtiva = 1;
+  
+      function mudarLinguagem() {
+          console.log("função chamada");
+          if (ukAtiva == 1) {
+              uk.style.display = 'none';
+              brazil.style.display = 'flex';
+              ukAtiva = 0;
+          } else {
+              uk.style.display = 'flex';
+              brazil.style.display = 'none';
+              ukAtiva = 1;
+          }
+      }
+  
+      brazil.addEventListener("click", mudarLinguagem);
+      uk.addEventListener("click", mudarLinguagem);
+  });
+  

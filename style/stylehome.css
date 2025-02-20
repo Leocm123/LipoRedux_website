@@ -171,3 +171,7 @@ html {
   flex-direction: column;
 }
 /*==botaous-br=======================================*/
+
+#brazil{
+  display: none;
+}

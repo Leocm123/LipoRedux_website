@@ -20,6 +20,7 @@
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
 />
+ 
   </head>
   <body>
     <header>
@@ -39,10 +40,8 @@
 
         <div class="box-menu">
           <div class="vertical-line2"></div>
-          <div>
-            <a href=""> <img src="assets/united-kingdom.png" alt="" style="width: 32px; height: 32px;" /></a>
-            <a href=""> <img src="assets/brazil-flag.png" alt="" style="display: none;" /></a>
-          </div>
+           <div id="uk" onclick="mudarLinguagem()"><img src="assets/united-kingdom.png" style="width: 32px; height: 32px; cursor: pointer;" /></div> 
+            <div id="brazil" onclick="mudarLinguagem()"><img src="assets/brazil-flag.png" style="width: 32px; height: 32px; cursor: pointer;" /></div>
         </div>
       </nav>
     </header>
@@ -308,7 +307,7 @@
     </footer>
 
     
-
+    <script src="scripthome.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
   </body>
